@@ -1,0 +1,22 @@
+//入力された値の読み取りをしよう
+class dentaku1{
+    public static void main(String args[]){
+        int val1=0;//最初の数字
+        int val2=0;//次の数字
+        String ope;//演算子    //最初に表示させる文章書く
+        if (args.length !=3){
+            System.out.println("使用例:java dentaku 数値 演算子 数値");//[0][2]は数字にする
+            System.out.println("演算子は kakeru waru tasu hiku の4つ");//演算子*がコマンドプロンプト上で別の意味を持つため演算子を文字にした
+            System.exit(0);//プログラムを終了する。
+        }
+        //入力した値(数字)を文字列から整数に変換する。1番目と3番目の引数の値のこと。
+        
+        val1=Integer.parseInt(args[0]);//Integer.parseIntは引数の文字列を整数に変換する
+        val2=Integer.parseInt(args[2]);
+        ope=args[1];//[1]は演算子だから。
+        
+        System.out.println("入力された式は " + val1 + " " + ope + " " + val2 + " です");
+    }
+}
+
+//次のファイルで演算子が正しいかをチェック
